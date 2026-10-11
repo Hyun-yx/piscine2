@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rush00.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yixho <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: yixho <yixho@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 12:16:35 by yixho             #+#    #+#             */
-/*   Updated: 2026/10/10 12:57:59 by yixho            ###   ########.fr       */
+/*   Updated: 2026/10/11 11:12:54 by yixho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,44 +16,29 @@ void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
+
 void	rush(int x, int y)
 {
 	int	r;
 	int	c;
 
 	r = 0;
-	while (r <= y - 1)
+	while (r < y)
 	{
 		c = 0;
-		if (r == 0 || r == y - 1)
+		while (c < x)
 		{
-			while (c <= x - 1)
-			{
-				if (c == 0 || c == x - 1)
-					ft_putchar('o');
-				else
-					ft_putchar('-');
-				c++;
-			}
-		}
-		else
-		{
-			while (c <= x - 1)
-			{
-				if (c == 0 || c == x - 1)
-					ft_putchar('|');
-				else
-					ft_putchar(' ');
-				c++;
-			}
+			if ((r == 0 || r == y - 1) && (c == 0 || c == x - 1))
+				ft_putchar('o');
+			else if (r == 0 || r == y - 1)
+				ft_putchar('-');
+			else if (c == 0 || c == x - 1)
+				ft_putchar('|');
+			else
+				ft_putchar(' ');
+			c++;
 		}
 		ft_putchar('\n');
 		r++;
 	}
-}
-
-int	main(void)
-{
-	rush(6, 7);
-	return (0);
 }
