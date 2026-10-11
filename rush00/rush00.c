@@ -12,10 +12,15 @@
 
 #include <unistd.h>
 
-void	ft_putchar(char c);
-
-void	run(int x, int y, int c, int r)
+void	ft_putchar(char c)
 {
+	write(1, &c, 1);
+}
+void	rush(int x, int y)
+{
+	int	r;
+	int	c;
+
 	r = 0;
 	while (r <= y - 1)
 	{
@@ -24,39 +29,31 @@ void	run(int x, int y, int c, int r)
 		{
 			while (c <= x - 1)
 			{
-				if(c == 0 || c == x - 1)
-				{
+				if (c == 0 || c == x - 1)
 					ft_putchar('o');
-				}
 				else
-				{
 					ft_putchar('-');
-				}
 				c++;
 			}
-
 		}
 		else
 		{
 			while (c <= x - 1)
 			{
-				if(c == 0 || c == x - 1)
-				{
+				if (c == 0 || c == x - 1)
 					ft_putchar('|');
-				}
 				else
-				{
 					ft_putchar(' ');
-				}
 				c++;
 			}
 		}
 		ft_putchar('\n');
 		r++;
 	}
-
 }
 
-void	rush(int x, int y)
+int	main(void)
 {
+	rush(6, 7);
+	return (0);
 }
