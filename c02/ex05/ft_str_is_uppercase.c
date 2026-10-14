@@ -6,7 +6,7 @@
 /*   By: yixho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 18:04:55 by yixho             #+#    #+#             */
-/*   Updated: 2026/10/08 18:29:37 by yixho            ###   ########.fr       */
+/*   Updated: 2026/10/14 12:33:37 by yixho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_str_is_uppercase(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] <= 'Z' || str[i] >= 'A')
+		if (str[i] <= 'Z' && str[i] >= 'A')
 		{
 			i++;
 		}
@@ -33,7 +33,7 @@ int	ft_str_is_uppercase(char *str)
 /*
 int main(void)
 {
-	ft_str_is_uppercase("I LOVE SEGFAULT");
-	printf("%d", ft_str_is_uppercase("I LOVE SEGFAULT"));
+	ft_str_is_uppercase("I LOVE SEGFAULTa");
+	printf("%d", ft_str_is_uppercase("I LOVE SEGFAULTa"));
 	return (0);
 }*/

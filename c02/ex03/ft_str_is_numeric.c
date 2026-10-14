@@ -6,7 +6,7 @@
 /*   By: yixho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 13:28:05 by yixho             #+#    #+#             */
-/*   Updated: 2026/10/08 17:57:11 by yixho            ###   ########.fr       */
+/*   Updated: 2026/10/14 12:30:23 by yixho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_str_is_numeric(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] <= 9 || str[i] >= 0)
+		if (str[i] <= 9 && str[i] >= 0)
 		{
 			i++;
 		}
@@ -30,10 +30,10 @@ int	ft_str_is_numeric(char *str)
 	}
 	return (1);
 }
-
+/*
 int main(void)
 {
-	ft_str_is_numeric("123");
-	printf("%d", ft_str_is_numeric("123"));
+	ft_str_is_numeric("123a");
+	printf("%d", ft_str_is_numeric("123a"));
 	return (0);
-}
+}*/

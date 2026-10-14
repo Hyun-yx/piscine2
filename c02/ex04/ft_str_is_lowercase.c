@@ -6,7 +6,7 @@
 /*   By: yixho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 18:04:55 by yixho             #+#    #+#             */
-/*   Updated: 2026/10/08 18:27:43 by yixho            ###   ########.fr       */
+/*   Updated: 2026/10/14 12:32:11 by yixho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_str_is_lowercase(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] <= 'z' || str[i] >= 'a')
+		if (str[i] <= 'z' && str[i] >= 'a')
 		{
 			i++;
 		}
@@ -33,7 +33,7 @@ int	ft_str_is_lowercase(char *str)
 /*
 int main(void)
 {
-	ft_str_is_lowercase("segfault is lesser than three");
-	printf("%d", ft_str_is_lowercase("segfault is lesser than three"));
+	ft_str_is_lowercase("segfault is lesser than three3");
+	printf("%d", ft_str_is_lowercase("segfault is lesser than three3"));
 	return (0);
 }*/

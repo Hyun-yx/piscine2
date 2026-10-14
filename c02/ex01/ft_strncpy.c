@@ -6,7 +6,7 @@
 /*   By: yixho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 12:07:44 by yixho             #+#    #+#             */
-/*   Updated: 2026/10/10 16:02:12 by yixho            ###   ########.fr       */
+/*   Updated: 2026/10/13 17:51:18 by yixho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[i] = '\0';
 		i++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
 /*
