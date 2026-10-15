@@ -3,15 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yixho <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: wli-ting <wli-ting@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/08 18:04:55 by yixho             #+#    #+#             */
-/*   Updated: 2026/10/14 12:33:37 by yixho            ###   ########.fr       */
+/*   Created: 2026/04/15 19:00:27 by wli-ting          #+#    #+#             */
+/*   Updated: 2026/04/21 17:09:08 by wli-ting         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-
 int	ft_str_is_uppercase(char *str)
 {
 	int	i;
@@ -19,21 +16,25 @@ int	ft_str_is_uppercase(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] <= 'Z' && str[i] >= 'A')
-		{
-			i++;
-		}
-		else
-		{
+		if ((str[i] < 65) || (str[i] > 90))
 			return (0);
-		}
+		i++;
 	}
 	return (1);
 }
-/*
-int main(void)
+
+/*#include <stdio.h>
+int	main()
 {
-	ft_str_is_uppercase("I LOVE SEGFAULTa");
-	printf("%d", ft_str_is_uppercase("I LOVE SEGFAULTa"));
-	return (0);
+	char str[] = "";
+	char str1[] = "uehfwajj";
+	char str2[] = "AHWDHJKF";
+	char str3[] = "#$%^&^&*";
+	char str4[] = "GDAJD283";
+
+	printf("Empty = %d\n", ft_str_is_uppercase(str));
+	printf("Lwrcase = %d\n", ft_str_is_uppercase(str1));
+	printf("Uprcase = %d\n", ft_str_is_uppercase(str2));
+	printf("Special = %d\n", ft_str_is_uppercase(str3));
+	printf("Alpha + Num = %d\n", ft_str_is_uppercase(str4));
 }*/

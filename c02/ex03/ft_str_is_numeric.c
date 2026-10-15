@@ -1,17 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: yixho <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/08 13:28:05 by yixho             #+#    #+#             */
-/*   Updated: 2026/10/14 12:30:23 by yixho            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include <stdio.h>
-
 int	ft_str_is_numeric(char *str)
 {
 	int	i;
@@ -19,21 +5,18 @@ int	ft_str_is_numeric(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] <= 9 && str[i] >= 0)
-		{
-			i++;
-		}
-		else
-		{
+		if ((str[i] < '0') || (str[i] > '9'))
 			return (0);
-		}
+		i++;
 	}
 	return (1);
 }
-/*
-int main(void)
+
+#include <stdio.h>
+int	main(void)
 {
-	ft_str_is_numeric("123a");
-	printf("%d", ft_str_is_numeric("123a"));
-	return (0);
-}*/
+	printf("%d\n", ft_str_is_numeric("0123"));
+	printf("%d\n", ft_str_is_numeric("456se"));
+	printf("%d\n", ft_str_is_numeric("oooh"));
+	printf("%d\n", ft_str_is_numeric("51339"));
+}

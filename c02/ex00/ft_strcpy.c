@@ -3,16 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yixho <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: yixho <yixho@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/07 10:16:49 by yixho             #+#    #+#             */
-/*   Updated: 2026/10/13 12:28:46 by yixho            ###   ########.fr       */
+/*   Created: 2026/04/14 11:58:17 by wli-ting          #+#    #+#             */
+/*   Updated: 2026/04/21 17:08:04 by wli-ting         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <string.h>
-
 char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
@@ -27,12 +23,11 @@ char	*ft_strcpy(char *dest, char *src)
 	return (dest);
 }
 /*
-int main(void)
+int main()
 {
-	char m[] = "momonga";
-	char f[] = "furuhonya";
+	char	a[] = "ohkms";
+	char	b[] = "dontdothat";
 
-	ft_strcpy(f, m);
-	printf("dst = %s", f);
+	printf("%s\n", ft_strcpy(a, b));
 	return (0);
 }*/

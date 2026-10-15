@@ -3,15 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yixho <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: yixho <yixho@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/08 18:04:55 by yixho             #+#    #+#             */
-/*   Updated: 2026/10/14 12:32:11 by yixho            ###   ########.fr       */
+/*   Created: 2026/04/15 17:52:03 by yixho             #+#    #+#             */
+/*   Updated: 2026/04/21 17:08:55 by yixho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-
 int	ft_str_is_lowercase(char *str)
 {
 	int	i;
@@ -19,21 +16,20 @@ int	ft_str_is_lowercase(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] <= 'z' && str[i] >= 'a')
-		{
-			i++;
-		}
-		else
-		{
+		if (!(str[i] >= 97) && (str[i] <= 122))
 			return (0);
-		}
+		i++;
 	}
 	return (1);
 }
-/*
-int main(void)
+
+#include <stdio.h>
+int	main()
 {
-	ft_str_is_lowercase("segfault is lesser than three3");
-	printf("%d", ft_str_is_lowercase("segfault is lesser than three3"));
+	printf("%d\n", ft_str_is_lowercase(""));
+	printf("%d\n", ft_str_is_lowercase("ABC1YZ"));
+	printf("%d\n", ft_str_is_lowercase("abc1yz"));
+	printf("%d\n", ft_str_is_lowercase("ABCXYZ"));
+	printf("%d\n", ft_str_is_lowercase("abcxyz"));
 	return (0);
-}*/
+}

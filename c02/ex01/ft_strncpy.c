@@ -3,19 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yixho <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: yixho <yixho@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/07 12:07:44 by yixho             #+#    #+#             */
-/*   Updated: 2026/10/13 17:51:18 by yixho            ###   ########.fr       */
+/*   Created: 2026/04/14 20:04:03 by wli-ting          #+#    #+#             */
+/*   Updated: 2026/04/27 14:06:47 by wli-ting         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <string.h>
-
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (i < n && src[i] != '\0')
@@ -28,18 +24,18 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[i] = '\0';
 		i++;
 	}
-	dest[i] = '\0';
 	return (dest);
 }
 /*
+#include <stdio.h>
+#include <string.h>
 int	main(void)
 {
-	char	dest[] = "momonga";
-	char	src[] = "furuhonya";
-	int		n;
+	char	dest[] = "github";
+	char	src[] = "piscine";
+	unsigned int	n;
 
-	n = 7;
-	ft_strncpy(dest, src, n);
-	printf("dst = %s", dest);
+	n = 5;
+	printf("%s", ft_strncpy(dest, src, n));
 	return (0);
 }*/
