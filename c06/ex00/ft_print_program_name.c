@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yixho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/20 18:50:43 by yixho             #+#    #+#             */
-/*   Updated: 2026/10/20 18:50:44 by yixho            ###   ########.fr       */
+/*   Created: 2026/10/24 18:35:34 by yixho             #+#    #+#             */
+/*   Updated: 2026/10/24 19:08:51 by yixho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <unistd.h>
+#include <unistd.h>
 
-void	ft_putstr(char *str)
+void	prog(char *str)
 {
 	int	i;
 
@@ -22,12 +22,13 @@ void	ft_putstr(char *str)
 		write(1, &str[i], 1);
 		i++;
 	}
+	write(1, "\n", 1);
 }
-/*
+
 int	main(int ac, char **av)
 {
-	if (ac != 2)
+	if (ac != 1)
 		return (0);
-	ft_putstr(av[1]);
+	prog(av[0]);
 	return (0);
-}*/
+}
