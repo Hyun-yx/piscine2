@@ -6,13 +6,13 @@
 /*   By: yixho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 19:11:34 by yixho             #+#    #+#             */
-/*   Updated: 2026/10/24 19:29:04 by yixho            ###   ########.fr       */
+/*   Updated: 2026/10/27 12:12:03 by yixho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	params(char *str)
+void	ft_print_params(char *str)
 {
 	int	i;
 
@@ -27,16 +27,15 @@ void	params(char *str)
 
 int	main(int ac, char **av)
 {
-	int	c;
+	int	j;
 
-	c = 1;
+	j = 1;
 	if (ac == 1)
 		return (0);
-	while (av[c] != NULL)
+	while (av[j] != NULL)
 	{
-		params(av[c]);
-		c++;
+		ft_print_params(av[j]);
+		j++;
 	}
 	return (0);
 }
-
